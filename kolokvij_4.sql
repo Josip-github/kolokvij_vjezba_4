@@ -107,6 +107,9 @@ update punac set majica = 'Osijek';
 #U tablici prijatelj obrišite sve zapise čija je vrijednost kolone prstena veće od 17.
 delete from prijatelj where prstena > 17;
 
+#Izlistajte haljina iz tablice snasa uz uvjet da vrijednost kolone treciputa nepoznate.
+select haljina from snasa where treciputa is null;
+
 
 
 
