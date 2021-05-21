@@ -104,6 +104,9 @@ values(1,1),(2,2),(3,3);
 #U tablici punac postavite svim zapisima kolonu majica na vrijednost Osijek.
 update punac set majica = 'Osijek';
 
+#U tablici prijatelj obrišite sve zapise čija je vrijednost kolone prstena veće od 17.
+delete from prijatelj where prstena > 17;
+
 
 
 
