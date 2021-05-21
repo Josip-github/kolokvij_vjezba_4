@@ -110,6 +110,21 @@ delete from prijatelj where prstena > 17;
 #Izlistajte haljina iz tablice snasa uz uvjet da vrijednost kolone treciputa nepoznate.
 select haljina from snasa where treciputa is null;
 
+/*Prikažite nausnica iz tablice mladic, jmbag iz tablice prijatelj te
+kratkamajica iz tablice becar uz uvjet da su vrijednosti kolone
+treciputa iz tablice snasa poznate te da su vrijednosti kolone lipa iz
+tablice zena različite od 29. Podatke posložite po kratkamajica iz
+tablice becar silazno.*/
+
+#mladic, prijatelj, becar, snasa, zena
+select a.nausnica, f.jmbag, e.kratkamajica 
+from mladic a inner join zena_mladic b on a.sifra = b.mladic 
+inner join zena c on b.zena = c.sifra 
+inner join snasa d on c.sifra = d.zena 
+inner join becar e on d.sifra = e.snasa 
+inner join prijatelj f on e.sifra = f.becar 
+where d.treciputa is not null and c.lipa != 29.00;
+
 
 
 
