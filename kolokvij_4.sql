@@ -99,7 +99,7 @@ insert into mladic(vesta)
 values('Adidas'),('Nike'),('Iz Lidla');
 
 insert into zena_mladic(zena,mladic)
-values(1,1),(2,2),(3,3);
+values(3,1),(3,2),(3,3);
 
 #U tablici punac postavite svim zapisima kolonu majica na vrijednost Osijek.
 update punac set majica = 'Osijek';
@@ -125,8 +125,10 @@ inner join becar e on d.sifra = e.snasa
 inner join prijatelj f on e.sifra = f.becar 
 where d.treciputa is not null and c.lipa != 29.00;
 
-
-
+#Prikažite kolone lipa i prstena iz tablice zena čiji se primarni ključ ne nalaze u tablici zena_mladic.
+select z.lipa, z.prstena 
+from zena z inner join zena_mladic zm on z.sifra = zm.zena 
+where zm.zena is null; #nisam siguran je li ovo točno
 
 
 
