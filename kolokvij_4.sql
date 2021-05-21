@@ -101,6 +101,9 @@ values('Adidas'),('Nike'),('Iz Lidla');
 insert into zena_mladic(zena,mladic)
 values(1,1),(2,2),(3,3);
 
+#U tablici punac postavite svim zapisima kolonu majica na vrijednost Osijek.
+update punac set majica = 'Osijek';
+
 
 
 
