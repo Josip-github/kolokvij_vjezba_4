@@ -127,8 +127,8 @@ where d.treciputa is not null and c.lipa != 29.00;
 
 #Prikažite kolone lipa i prstena iz tablice zena čiji se primarni ključ ne nalaze u tablici zena_mladic.
 select z.lipa, z.prstena 
-from zena z inner join zena_mladic zm on z.sifra = zm.zena 
-where zm.zena is null; #nisam siguran je li ovo točno
+from zena z left join zena_mladic zm on z.sifra = zm.zena 
+where zm.zena is null; 
 
 
 
